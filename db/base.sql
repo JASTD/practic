@@ -38,25 +38,29 @@ responsible_t int,
 foreign key (responsible_t) references employeers(id_e) 
 );
 
+create table stations(
+id_station int not null primary key auto_increment,
+name_s varchar(100) not null,
+cost_s decimal(6,1)
+);
+
+create table marhrut(
+id_m int not null primary key auto_increment,
+start_m bool,
+finish_m bool,
+fk_s int,
+foreign key (fk_s) references stations(id_station)
+);
 
 -- создание таблицы маршруты
 create table route(
 id_r int not null primary key auto_increment,
-exit_point_r varchar(100) not null,
-finish_point_r varchar(100) not null,
 goal_r varchar(100) not null,
-price decimal(5,1),
 kilometrage_r decimal(6,1), 
 train_r int,
+marhrut_fk int,
+foreign key (marhrut_fk) references marhrut(id_m),
 foreign key (train_r) references trains(train_id)
 );
 
--- создание таблицы справки 
-create table spravki(
-id_s int not null primary key auto_increment,
-otprav_s datetime,
-pib_s datetime,
-route_fk int,
-foreign key (route_fk) references route(id_r)
-);
 
