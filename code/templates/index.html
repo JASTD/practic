@@ -8,15 +8,32 @@
 </head>
 
 <body>
-    <h1> HTML </h1>
-    
+    <div class="navbar">
+        <a href="#home">Главная</a>
+        <a href="#contact">Контакты</a>
+        <div class="headzd">       
+            <p>Железнодорожная информационно-справочная система</p>
+         </div>
+        <a href="#logout" class="logout">Выход</a>
+      </div>
 
-    <a href="https://vk.com/dont_touch_me_ever" target="_blank"> Разработчик *тык*</a>
-
-    <a href="/main" target="_blank"> Переход на main.html</a>
+    <div class="header">
+        <h1>Железнодорожная информационно-справочная система</h1>
+      </div>
+      <div class="container">
+            <form class="search-form">
+                <input type="text" placeholder="Введите станцию отправления">
+                <input type="text" placeholder="Введите станцию назначения">
+                 <button type="submit">Найти поезда</button>
+            </form>
+        <div class="results">
+          <!-- Здесь будут результаты поиска -->
+        </div>
+      </div>
 </body>
 
 </html>
 
 <!-- горячее выделение alt+w -->
 <!-- alt + лкм - мультикурсор -->
+<!-- target="_blank" - переход на новую страницу при клике-->

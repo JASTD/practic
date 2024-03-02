@@ -9,7 +9,7 @@ def send_static(path):
 
 @app.route("/")
 def index():
-    return render_template('index.html', title = 'Про flaskович')
+    return render_template('index.html', title = 'Поезда туту')
 
 @app.route("/main")
 def main():
